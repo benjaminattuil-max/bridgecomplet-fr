@@ -27,66 +27,41 @@ export default function ConsultationPage() {
       <section className="section px-4">
         <div className="container-wide grid md:grid-cols-2 gap-12">
 
-          {/* Formulaire */}
+          {/* Réservation en ligne */}
           <div className="bg-white border border-neutral-200 rounded-sm p-8">
-            <h2 className="font-serif text-h3 font-bold mb-6">Votre demande</h2>
-            {/* 
-              NOTE : Ce formulaire doit être connecté à un service d'envoi d'emails.
-              Options recommandées : Resend, Formspree, ou un serveur API Next.js.
-              Le champ 'action' doit pointer vers votre endpoint.
-            */}
-            <form className="space-y-5" action="/api/contact" method="POST">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="prenom" className="block text-sm font-medium text-neutral-700 mb-1">Prénom *</label>
-                  <input id="prenom" name="prenom" type="text" required className="w-full border border-neutral-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
-                </div>
-                <div>
-                  <label htmlFor="nom" className="block text-sm font-medium text-neutral-700 mb-1">Nom *</label>
-                  <input id="nom" name="nom" type="text" required className="w-full border border-neutral-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
-                </div>
-              </div>
+            <h2 className="font-serif text-h3 font-bold mb-4">Réserver en ligne</h2>
+            <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+              La prise de rendez-vous se fait directement via Doctolib, avec confirmation immédiate et rappel automatique. C'est le moyen le plus rapide d'obtenir un créneau de consultation de bilan.
+            </p>
 
-              <div>
-                <label htmlFor="telephone" className="block text-sm font-medium text-neutral-700 mb-1">Téléphone *</label>
-                <input id="telephone" name="telephone" type="tel" required className="w-full border border-neutral-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
-              </div>
+            <a
+              href={SITE_CONFIG.doctolib}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full justify-center mb-8"
+            >
+              Prendre rendez-vous sur Doctolib
+            </a>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-1">Email</label>
-                <input id="email" name="email" type="email" className="w-full border border-neutral-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 transition-colors" />
-              </div>
-
-              <div>
-                <label htmlFor="situation" className="block text-sm font-medium text-neutral-700 mb-1">Votre situation *</label>
-                <select id="situation" name="situation" required className="w-full border border-neutral-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 transition-colors bg-white">
-                  <option value="">Choisissez votre situation</option>
-                  <option>Je suis totalement édenté</option>
-                  <option>Je vais perdre toutes mes dents</option>
-                  <option>Je porte un dentier que je supporte mal</option>
-                  <option>Mes dents bougent (parodontite)</option>
-                  <option>J'ai peu d'os et cherche une solution</option>
-                  <option>Autre situation</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">Votre message (facultatif)</label>
-                <textarea id="message" name="message" rows={4} className="w-full border border-neutral-300 rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-brand-500 transition-colors resize-none" placeholder="Décrivez votre situation, vos questions, vos disponibilités..." />
-              </div>
-
-              <div className="flex items-start gap-3">
-                <input id="rgpd" name="rgpd" type="checkbox" required className="mt-0.5 flex-shrink-0" />
-                <label htmlFor="rgpd" className="text-xs text-neutral-500">
-                  J'accepte que mes données soient utilisées pour traiter ma demande de rendez-vous, conformément à la{' '}
-                  <a href="/politique-confidentialite" className="text-brand-600 hover:underline">politique de confidentialité</a>.
-                </label>
-              </div>
-
-              <button type="submit" className="btn-primary w-full justify-center">
-                Envoyer ma demande
-              </button>
-            </form>
+            <p className="text-sm font-semibold text-neutral-700 mb-3">Quelle que soit votre situation :</p>
+            <ul className="space-y-2 text-sm text-neutral-600 mb-2">
+              {[
+                'Je suis totalement édenté',
+                'Je vais perdre toutes mes dents',
+                'Je porte un dentier que je supporte mal',
+                'Mes dents bougent (parodontite)',
+                "J'ai peu d'os et cherche une solution",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="text-brand-600 font-bold mt-0.5">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs text-neutral-500 mt-4">
+              Vous préférez en parler de vive voix avant de réserver ? Appelez directement le cabinet au{' '}
+              <a href={`tel:${SITE_CONFIG.phoneRaw}`} className="text-brand-600 font-semibold hover:underline">{SITE_CONFIG.phone}</a>.
+            </p>
           </div>
 
           {/* Informations pratiques */}
