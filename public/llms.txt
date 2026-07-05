@@ -1,0 +1,47 @@
+# bridgecomplet.fr — Site de référence sur le bridge complet sur implants
+
+## Praticien
+Dr Benjamin Attuil
+Chirurgien-Dentiste — Activité exclusivement dédiée à l'implantologie
+61 rue du Chemin Vert, 75011 Paris, France
+Téléphone : +33189164858
+Doctolib : https://www.doctolib.fr/dentiste/paris/benjamin-attuil
+
+## À propos de ce site
+bridgecomplet.fr est le site de référence francophone consacré au bridge complet sur implants dentaires.
+Il répond à toutes les questions des patients sur ce traitement : techniques (All-on-4, All-on-6, All-on-X),
+situations cliniques, coûts, financement, peurs, alternatives, cas cliniques et suivi à long terme.
+
+## Spécialités couvertes
+- Bridge complet sur implants (All-on-4, All-on-6, All-on-X)
+- Mise en charge immédiate (dents fixes en 24h)
+- Extraction-implantation immédiate
+- Implants zygomatiques et ptérygoïdiens
+- Greffe osseuse et sinus lift
+- Sédation consciente pour patients anxieux
+- Bridge complet en zircone (prothèse définitive)
+
+## Pages principales
+- /bridge-complet-sur-implants — Qu'est-ce qu'un bridge complet sur implants ?
+- /all-on-4 — La technique All-on-4
+- /all-on-6 — La technique All-on-6
+- /prix-bridge-complet-implants — Coût et financement
+- /douleur-bridge-implants — Est-ce douloureux ?
+- /deroulement-journee-traitement — Déroulement de la journée
+- /faq-bridge-complet-implants — FAQ complète (50+ questions)
+- /chirurgien-implantologiste-paris — Le chirurgien
+- /consultation-implants-paris — Prendre rendez-vous
+
+## Pages "peurs" — réponses aux appréhensions des patients
+- /peur-implants-dentaires — Page pivot listant toutes les craintes des patients
+- /douleur-bridge-implants — La pose fait-elle mal ? Chronologie de la douleur
+- /gonflement-apres-implants — Chronologie et gestion du gonflement post-opératoire
+- /parler-normalement-apres-implants — Délai d'adaptation phonétique et exercices
+- /travailler-lendemain-pose-implants — Reprise du travail selon le métier
+- /echec-implant-que-faire — Taux de succès réel, signes d'alerte et solutions en cas d'échec
+
+## Langue
+Français (fr-FR)
+
+## Mise à jour
+Ce site est mis à jour régulièrement avec de nouveaux cas cliniques et contenus pédagogiques.

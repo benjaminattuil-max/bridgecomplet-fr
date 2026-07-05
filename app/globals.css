@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  /* Typographie de base */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  /* Focus visible accessible */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+}
+
+@layer components {
+  /* Bouton principal */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-sm
+           hover:bg-brand-800 active:scale-95 transition-all duration-150 text-base;
+  }
+
+  /* Bouton secondaire */
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-brand-700 text-brand-700 font-semibold px-7 py-3.5 rounded-sm
+           hover:bg-brand-50 active:scale-95 transition-all duration-150 text-base;
+  }
+
+  /* Bouton téléphone — or */
+  .btn-phone {
+    @apply inline-flex items-center gap-2 bg-gold-500 text-white font-bold px-7 py-3.5 rounded-sm
+           hover:bg-gold-600 active:scale-95 transition-all duration-150 text-base;
+  }
+
+  /* Section standard */
+  .section {
+    @apply py-section px-4;
+  }
+
+  .section-sm {
+    @apply py-section-sm px-4;
+  }
+
+  /* Conteneur */
+  .container-wide {
+    @apply max-w-wide mx-auto w-full;
+  }
+
+  .container-content {
+    @apply max-w-content mx-auto w-full;
+  }
+
+  /* Titre de page */
+  .page-eyebrow {
+    @apply text-sm font-semibold tracking-widest text-gold-500 uppercase mb-3;
+  }
+
+  /* Tag / Badge */
+  .tag {
+    @apply inline-block text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-700 rounded-full;
+  }
+
+  /* Fil d'Ariane */
+  .breadcrumb {
+    @apply flex items-center gap-2 text-sm text-neutral-400 mb-8;
+  }
+
+  .breadcrumb a {
+    @apply hover:text-brand-600 transition-colors;
+  }
+
+  /* Carte de réassurance */
+  .reassurance-card {
+    @apply bg-white border border-neutral-100 p-6 rounded-sm shadow-sm;
+  }
+
+  /* Prose médicale */
+  .prose-medical {
+    @apply prose prose-neutral max-w-none
+           prose-headings:font-serif prose-headings:text-neutral-900
+           prose-h2:text-h2 prose-h2:mt-12 prose-h2:mb-4
+           prose-h3:text-h3 prose-h3:mt-8 prose-h3:mb-3
+           prose-p:text-neutral-700 prose-p:leading-relaxed
+           prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline
+           prose-strong:text-neutral-900
+           prose-ul:text-neutral-700 prose-li:my-1;
+  }
+}
+
+@layer utilities {
+  /* Texte dégradé marque */
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-700 to-brand-500 bg-clip-text text-transparent;
+  }
+
+  /* Ligne décorative dorée */
+  .gold-line {
+    @apply block w-12 h-0.5 bg-gold-400 mb-6;
+  }
+
+  /* Animation d'entrée douce */
+  .fade-up {
+    animation: fadeUp 0.5s ease-out both;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Réduction du mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { animation: none; }
+  :root { scroll-behavior: auto; }
+}

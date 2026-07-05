@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(curl -sI --max-time 8 https://nodejs.org)",
+      "Bash(echo \"exit code: $?\")",
+      "Bash(sw_vers)",
+      "Bash(mkdir -p /tmp/local-node)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o node.tar.gz --max-time 120 https://nodejs.org/dist/v20.17.0/node-v20.17.0-darwin-arm64.tar.gz)",
+      "Bash(tar xzf *)",
+      "Bash(curl -sI \"http://localhost:3000/peur-implants-dentaires\")",
+      "Bash(curl -sL \"http://localhost:3000/echec-implant-que-faire/\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s http://localhost:3000/sitemap.xml)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import urllib.parse; print\\(urllib.parse.quote\\('edenté-total-solution-implants'\\)\\)\")",
+      "Bash(curl -sL -o /tmp/local-node/resp2.html -w \"%{http_code}\\\\n\" \"http://localhost:3000/$\\(python3 -c \"import urllib.parse; print\\(urllib.parse.quote\\('edenté-total-solution-implants'\\)\\)\"\\)/\")",
+      "Bash(pkill -f \"next lint\")",
+      "Bash(pkill -f \"eslint\")",
+      "Bash(python3 /tmp/local-node/audit_seo.py)",
+      "Bash(python3 /tmp/local-node/fix_titles.py)",
+      "Bash(python3 /tmp/local-node/fix_titles.py --apply)",
+      "Bash(python3 /tmp/local-node/audit_final_titles.py)",
+      "Bash(python3 /tmp/local-node/audit_desc_v2.py)",
+      "Bash(python3 /tmp/local-node/audit_desc_all.py)",
+      "Bash(python3 /tmp/local-node/fix_descriptions.py)",
+      "Bash(python3 /tmp/local-node/audit_og.py)",
+      "Bash(python3 /tmp/local-node/audit_complete.py)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.email=\"dev@bridgecomplet.fr\" -c user.name=\"Bridge Complet Dev\" commit -m \"Initial commit: site complet 65 pages, SEO optimisé\")"
+    ]
+  }
+}
