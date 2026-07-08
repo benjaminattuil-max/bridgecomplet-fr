@@ -17,10 +17,60 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
-export const metadata: Metadata = defaultMetadata
+// Mode maintenance temporaire : passer à false pour remettre le site en ligne normalement.
+const MAINTENANCE_MODE = true
+
+export const metadata: Metadata = MAINTENANCE_MODE
+  ? {
+      title: { absolute: 'Site en cours de mise à jour — Dr Benjamin Attuil' },
+      robots: { index: false, follow: false },
+    }
+  : defaultMetadata
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const dentistSchema = generateDentistSchema()
+
+  if (MAINTENANCE_MODE) {
+    return (
+      <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
+        <body
+          className="font-sans antialiased"
+          style={{
+            background: '#0d1a40',
+            color: '#ffffff',
+            minHeight: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '24px',
+          }}
+        >
+          <div style={{ maxWidth: 560, textAlign: 'center' }}>
+            <p style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#d4a54a', marginBottom: 16 }}>
+              Mise à jour en cours
+            </p>
+            <h1 style={{ fontSize: 32, fontWeight: 700, lineHeight: 1.25, marginBottom: 20 }}>
+              Le site est en cours d&apos;actualisation
+            </h1>
+            <p style={{ fontSize: 16, lineHeight: 1.6, color: '#b3ccff', marginBottom: 32 }}>
+              Nous mettons à jour le contenu du site pour vous offrir une information encore plus complète.
+              Le site sera de nouveau en ligne très prochainement.
+              Pour toute question ou prise de rendez-vous, contactez directement le cabinet.
+            </p>
+            <a
+              href={`tel:${SITE_CONFIG.phoneRaw}`}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#b8892e', color: '#ffffff', fontWeight: 700, fontSize: 16, padding: '14px 28px', borderRadius: 4, textDecoration: 'none' }}
+            >
+              📞 {SITE_CONFIG.phone}
+            </a>
+            <p style={{ marginTop: 40, fontSize: 14, color: '#7a8bc4' }}>
+              Dr Benjamin Attuil — Implantologie Exclusive, Paris 11e
+            </p>
+          </div>
+        </body>
+      </html>
+    )
+  }
 
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
